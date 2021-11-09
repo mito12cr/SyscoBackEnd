@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 public class Order {
     @javax.persistence.Id
@@ -18,6 +19,8 @@ public class Order {
     @Column(name = "Id", nullable = false)
     private Integer Id;
 
+    private List<Items>items;
+
     public Order() {
     }
 
@@ -26,6 +29,8 @@ public class Order {
         this.User = user;
         this.Id = id;
     }
+
+
 
     public Timespan getCreatedAt() { return CreatedAt; }
 
