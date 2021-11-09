@@ -1,13 +1,13 @@
 package com.SyscoProyect.SyscoBackEnd.Services;
 
-import com.SyscoProyect.SyscoBackEnd.Models.Orders;
+import com.SyscoProyect.SyscoBackEnd.Models.Order;
 
 import java.util.List;
 
 public interface OrdersService {
-    Orders save(Orders order);
-    List<Orders> findAll();
-    Orders findById(long id) throws Exception;
-    Orders update(Orders orders);
+    Order save(Order order);
+    List<Order> findAll();
+    Order findById(long id) throws Exception;
+    Order update(Order orders);
     void delete(long id) throws Exception;
 }

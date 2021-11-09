@@ -1,9 +1,9 @@
 package com.SyscoProyect.SyscoBackEnd.Repositories;
 
-import com.SyscoProyect.SyscoBackEnd.Models.Orders;
+import com.SyscoProyect.SyscoBackEnd.Models.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrdersRepository extends JpaRepository<Orders, Long> {
+public interface OrdersRepository extends JpaRepository<Order, Long> {
 }

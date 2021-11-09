@@ -1,7 +1,6 @@
 package com.SyscoProyect.SyscoBackEnd.Services;
 
-import com.SyscoProyect.SyscoBackEnd.Models.Orders;
-import com.SyscoProyect.SyscoBackEnd.Models.Products;
+import com.SyscoProyect.SyscoBackEnd.Models.Order;
 import com.SyscoProyect.SyscoBackEnd.Repositories.OrdersRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -13,22 +12,22 @@ public class OrdersServiceImp implements OrdersService{
     public OrdersServiceImp(OrdersRepository ordersRepository) { this.ordersRepository = ordersRepository;}
 
     @Override
-    public List<Orders> findAll() {
+    public List<Order> findAll() {
         return ordersRepository.findAll();
     }
 
     @Override
-    public Orders save(Orders orders) {
+    public Order save(Order orders) {
         return ordersRepository.save(orders);
     }
 
     @Override
-    public Orders findById(long id) throws Exception {
+    public Order findById(long id) throws Exception {
         return ordersRepository.findById(id).orElseThrow(Exception::new);
     }
 
     @Override
-    public Orders update(Orders orders) {
+    public Order update(Order orders) {
         return ordersRepository.save(orders);
     }
 
